@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Your Title</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4; /* 背景色はそのまま */
+            background-color: #f4f4f4; /* Background color */
         }
 
         header {
-            background: #153448; /* 45% のメインカラー */
-            color: #000000; /* 文字色を黒に変更 */
+            background: #153448; /* Main color */
+            color: #ffffff; /* White text */
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            background: #1D3E5D; /* Darker shade for the navbar */
             padding: 10px 0;
             text-align: center;
         }
 
+        nav a {
+            color: #ffffff; /* White text */
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFCC00; /* Highlight color */
+        }
+
         section {
-            background: #DFD0B8; /* 10% のアクセントカラー */
+            background: #DFD0B8; /* Accent color */
             padding: 20px;
             margin: 15px;
             border-radius: 5px;
@@ -29,11 +47,11 @@
         }
 
         h1, h2 {
-            color: #000000; /* 文字色を黒に変更 */
+            color: #000000; /* Black text */
         }
 
         p {
-            color: #000000; /* 文字色を黒に変更 */
+            color: #333333; /* Dark gray text for better readability */
         }
 
         ul {
@@ -47,35 +65,55 @@
 
         a {
             text-decoration: none;
-            color: #000000; /* 文字色を黒に変更 */
+            color: #000000; /* Black text */
             border-bottom: 1px solid transparent;
             transition: border-bottom 0.3s;
         }
 
         a:hover {
-            border-bottom: 1px solid #3C5B6F; /* サブカラー */
+            border-bottom: 1px solid #3C5B6F; /* Sub color */
         }
 
         footer {
-            background: #153448; /* メインカラー */
-            color: #000000; /* 文字色を黒に変更 */
+            background: #153448; /* Main color */
+            color: #ffffff; /* White text */
             padding: 15px;
             text-align: center;
             position: relative;
             bottom: 0;
             width: 100%;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            section {
+                margin: 10px; /* Adjust margin for smaller screens */
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- ホームセクション -->
+    <!-- Header -->
     <header>
         <h1>Welcome</h1>
-        <p>example</p>
+        <p>Explore my passion for guitars and signal processing!</p>
     </header>
 
-    <!-- ギターセクション -->
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#guitar">Guitar</a>
+        <a href="#signal-processing">Signal Processing</a>
+        <a href="#others">Others</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Guitar Section -->
     <section id="guitar">
         <h2>Guitar: ギター</h2>
         <p>ギターのこと</p>
@@ -90,10 +128,10 @@
         </ul>
     </section>
 
-    <!-- 信号処理セクション -->
+    <!-- Signal Processing Section -->
     <section id="signal-processing">
         <h2>Signal Processing: 信号処理</h2>
-        <p>ギターに関連する信号処理のこと</p></p>
+        <p>ギターに関連する信号処理のこと</p>
         <ul>
             <li><a href="acoustic-reflection.html">共鳴音響反射と音叉</a></li>
             <li>test2</li>
@@ -101,17 +139,17 @@
         </ul>
     </section>
 
-    <!-- otherセクション -->
+    <!-- Other Section -->
     <section id="others">
         <h2>Others</h2>
-        <p></p>
+        <p>他の興味について</p>
         <ul>
             <li><a href="#">test1</a></li>
         </ul>
     </section>
 
-    <!-- 問い合わせセクション -->
-    <footer>
+    <!-- Contact Section -->
+    <footer id="contact">
         <h2>Contact</h2>
         <p>If you'd like to get in touch:</p>
         <p>Email: email@example.com</p>
