@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Your Title</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,16 +14,28 @@
             position: relative; /* For sidebar positioning */
         }
 
-        header {
-            background: #153448; /* Main color */
+        /* Innovative top area */
+        .top-area {
+            background: linear-gradient(135deg, #153448, #1D3E5D); /* Gradient background */
+            height: 100px; /* Height of the top area */
+            display: flex; /* Use flexbox */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
             color: #ffffff; /* White text */
-            padding: 5px 0; /* Reduced padding for a smaller header */
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed; /* Fixed position */
-            width: 100%; /* Full width */
-            top: 0; /* Align to top */
-            z-index: 1; /* Ensure it's above other elements */
+            text-align: center; /* Center text */
+            position: relative; /* For positioning */
+            z-index: 1; /* Above other elements */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        .top-area h1 {
+            font-size: 2.5em; /* Font size for title */
+            margin: 0; /* No margin */
+        }
+
+        .top-area p {
+            font-size: 1.2em; /* Font size for subtitle */
+            margin: 0; /* No margin */
         }
 
         /* Sidebar styles */
@@ -36,7 +48,7 @@
             background-color: #1D3E5D; /* Darker shade for the sidebar */
             transition: 0.3s; /* Smooth transition */
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-            padding-top: 40px; /* Space for header */
+            padding-top: 40px; /* Space for top area */
             z-index: 1; /* Ensure it appears above other elements */
         }
 
@@ -49,8 +61,8 @@
             transition: background-color 0.3s; /* Background transition */
         }
 
-        .sidebar a:hover {
-            background-color: #FFCC00; /* Highlight color */
+        .sidebar a:not(:first-child):hover {
+            background-color: #FFCC00; /* Highlight color for other items */
         }
 
         /* Button to open the sidebar */
@@ -71,13 +83,13 @@
         section {
             background: #DFD0B8; /* Accent color */
             padding: 20px;
-            margin: 60px 15px; /* Adjust margin for fixed header */
+            margin: 60px 15px; /* Adjust margin for fixed top area */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: margin-left 0.3s; /* Transition for section */
         }
 
-        h1, h2 {
+        h2 {
             color: #000000; /* Black text */
         }
 
@@ -92,17 +104,6 @@
 
         ul li {
             margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #000000; /* Black text */
-            border-bottom: 1px solid transparent;
-            transition: border-bottom 0.3s;
-        }
-
-        a:hover {
-            border-bottom: 1px solid #3C5B6F; /* Sub color */
         }
 
         footer {
@@ -125,10 +126,11 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Welcome</h1>
-    </header>
+    <!-- Innovative Top Area -->
+    <div class="top-area">
+        <h1>Welcome to My Site</h1>
+        <p>Your journey into music and signal processing starts here!</p>
+    </div>
 
     <!-- Button to open the sidebar -->
     <button class="openbtn" onclick="toggleSidebar()">☰ Menu</button>
