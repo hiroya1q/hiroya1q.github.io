@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Title</title>
+    <title>Title</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,6 +12,18 @@
             padding: 0;
             background-color: #f4f4f4; /* Background color */
             position: relative; /* For sidebar positioning */
+        }
+
+        /* Minimal header */
+        .header {
+            background: #153448; /* Header background color */
+            height: 40px; /* Height of the header */
+            display: flex; /* Use flexbox */
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space between items */
+            padding: 0 20px; /* Padding for spacing */
+            position: relative; /* For positioning */
+            z-index: 1; /* Above other elements */
         }
 
         /* Innovative top area */
@@ -38,6 +50,28 @@
         .top-area p {
             font-size: 1.2em; /* Font size for subtitle */
             margin: 10px 0; /* Margin for spacing */
+        }
+
+        /* Search box styles */
+        .search-box {
+            display: flex; /* Use flexbox */
+            align-items: center; /* Center items vertically */
+        }
+
+        .search-box input[type="text"] {
+            padding: 5px; /* Padding inside the input */
+            border: 1px solid #ccc; /* Border style */
+            border-radius: 3px; /* Rounded corners */
+            margin-right: 5px; /* Space between input and button */
+        }
+
+        .search-box button {
+            padding: 5px 10px; /* Padding for the button */
+            background-color: #1D3E5D; /* Button color */
+            color: white; /* Button text color */
+            border: none; /* No border */
+            border-radius: 3px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
         }
 
         /* Sidebar styles */
@@ -128,6 +162,14 @@
     </style>
 </head>
 <body>
+
+    <!-- Minimal Header -->
+    <div class="header">
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button type="button">🔍</button>
+        </div>
+    </div>
 
     <!-- Innovative Top Area -->
     <div class="top-area">
