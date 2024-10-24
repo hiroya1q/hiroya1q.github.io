@@ -17,7 +17,7 @@
         header {
             background: #153448; /* Main color */
             color: #ffffff; /* White text */
-            padding: 10px 0; /* Reduced padding */
+            padding: 5px 0; /* Reduced padding for a smaller header */
             text-align: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed; /* Fixed position */
@@ -36,7 +36,7 @@
             background-color: #1D3E5D; /* Darker shade for the sidebar */
             transition: 0.3s; /* Smooth transition */
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-            padding-top: 60px; /* Space for header */
+            padding-top: 40px; /* Space for header */
             z-index: 1; /* Ensure it appears above other elements */
         }
 
@@ -61,7 +61,7 @@
             color: white; /* Button text color */
             border: none; /* No border */
             padding: 10px; /* Padding */
-            position: absolute;
+            position: fixed; /* Fixed position */
             top: 15px; /* Position from top */
             left: 20px; /* Position from left */
             z-index: 2; /* Above sidebar */
@@ -71,7 +71,7 @@
         section {
             background: #DFD0B8; /* Accent color */
             padding: 20px;
-            margin: 80px 15px; /* Adjust margin for fixed header */
+            margin: 60px 15px; /* Adjust margin for fixed header */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: margin-left 0.3s; /* Transition for section */
