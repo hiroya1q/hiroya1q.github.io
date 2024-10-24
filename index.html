@@ -75,7 +75,6 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: margin-left 0.3s; /* Transition for section */
-            margin-left: 0; /* Start without margin */
         }
 
         h1, h2 {
@@ -136,7 +135,7 @@
 
     <!-- Sidebar -->
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" onclick="toggleSidebar()">Close ×</a>
+        <a href="javascript:void(0)" onclick="toggleSidebar()" style="padding-top: 10px;">Close ×</a>
         <a href="#guitar">Guitar</a>
         <a href="#signal-processing">Signal Processing</a>
         <a href="#others">Others</a>
@@ -188,13 +187,17 @@
     <script>
         function toggleSidebar() {
             var sidebar = document.getElementById("mySidebar");
-            var mainSection = document.querySelector("section");
+            var mainSections = document.querySelectorAll("section"); // Select all sections
             if (sidebar.style.left === "-250px") {
                 sidebar.style.left = "0";
-                mainSection.style.marginLeft = "250px"; // Shift main section to the right
+                mainSections.forEach(function(section) {
+                    section.style.marginLeft = "250px"; // Shift all sections to the right
+                });
             } else {
                 sidebar.style.left = "-250px";
-                mainSection.style.marginLeft = "0"; // Reset margin
+                mainSections.forEach(function(section) {
+                    section.style.marginLeft = "0"; // Reset margin for all sections
+                });
             }
         }
     </script>
