@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>統計学・AI</title>
+    <title>AI・統計学</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            position: relative; /* For sidebar positioning */
         }
 
         .header {
@@ -20,12 +21,50 @@
             text-align: center;
         }
 
+        /* Sidebar styles */
+        .sidebar {
+            height: 100%;
+            width: 250px; /* Sidebar width */
+            position: fixed; /* Fixed position */
+            top: 0;
+            left: -250px; /* Start hidden */
+            background-color: #1D3E5D; /* Darker shade for the sidebar */
+            transition: 0.3s; /* Smooth transition */
+            padding-top: 40px; /* Space for header */
+            z-index: 1; /* Ensure it appears above other elements */
+        }
+
+        .sidebar a {
+            padding: 15px 20px; /* Increased padding */
+            text-decoration: none;
+            font-size: 20px; /* Font size */
+            color: #ffffff; /* White text */
+            display: block; /* Block display */
+            transition: background-color 0.3s; /* Background transition */
+        }
+
+        /* Button to open the sidebar */
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #1D3E5D; /* Button color */
+            color: white; /* Button text color */
+            border: none; /* No border */
+            padding: 10px; /* Padding */
+            position: fixed; /* Fixed position */
+            top: 15px; /* Position from top */
+            left: 20px; /* Position from left */
+            z-index: 2; /* Above sidebar */
+            border-radius: 5px; /* Rounded corners */
+        }
+
         section {
             background: #DFD0B8; /* Section background color */
             padding: 20px;
             margin: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: margin-left 0.3s; /* Transition for section */
         }
 
         h2 {
@@ -46,27 +85,42 @@
 </head>
 <body>
 
+    <!-- Button to open the sidebar -->
+    <button class="openbtn" onclick="toggleSidebar()">☰ Menu</button>
+
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="index.html">ホームに戻る</a> <!-- Home link -->
+        <a href="ai-statistics.html">AI・統計学</a>
+        <a href="#guitar">Guitar</a>
+        <a href="#signal-processing">Signal Processing</a>
+        <a href="#others">Others</a>
+        <a href="#contact">Contact</a>
+        <a href="javascript:void(0)" onclick="toggleSidebar()">Close ×</a> <!-- Close button -->
+    </div>
+
     <!-- Header -->
     <div class="header">
-        <h1>統計学・AIに関するページ</h1>
+        <h1>AI・統計学に関するページ</h1>
     </div>
 
     <!-- Main content section -->
     <section>
-        <h2>統計学</h2>
-        <p>統計学</p>
+        <h2>AIの基本</h2>
+        <p>人工知能（AI）は、機械が人間のように学習、推論、適応する能力を持つ技術のことを指します。</p>
     </section>
 
     <section>
-        <h2>AI</h2>
-        <p>AI</p>
+        <h2>統計学の重要性</h2>
+        <p>統計学は、データを収集、分析、解釈する方法を学ぶ学問で、AIと深く関わっています。</p>
     </section>
 
     <section>
         <h2>関連リンク</h2>
         <ul>
-            <li><a href="#">統計学に関して</a></li>
-            <li><a href="#">AIに関して</a></li>
+            <li><a href="#">AIに関する記事</a></li>
+            <li><a href="#">統計学に関する記事</a></li>
+            <li><a href="#">AIと統計学の融合</a></li>
         </ul>
     </section>
 
@@ -74,6 +128,17 @@
     <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            if (sidebar.style.left === "-250px") {
+                sidebar.style.left = "0";
+            } else {
+                sidebar.style.left = "-250px";
+            }
+        }
+    </script>
 
 </body>
 </html>
