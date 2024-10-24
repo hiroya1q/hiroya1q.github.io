@@ -3,48 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Title</title>
+    <title>AI・統計学</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4; /* Background color */
+            background-color: #f4f4f4;
             position: relative; /* For sidebar positioning */
         }
 
-        /* Minimal header with matching sidebar color */
         .header {
-            background: #1D3E5D; /* Same color as sidebar */
-            height: 40px; /* Height of the header */
-            display: flex; /* Use flexbox */
-            justify-content: flex-end; /* Align items to the right */
-            padding: 0 20px; /* Padding for spacing */
-            position: relative; /* For positioning */
-            z-index: 1; /* Above other elements */
-        }
-
-        /* Search box styles */
-        .search-box {
-            display: flex; /* Use flexbox */
-            align-items: center; /* Center items vertically */
-        }
-
-        .search-box input[type="text"] {
-            padding: 5px; /* Padding inside the input */
-            border: 1px solid #ccc; /* Border style */
-            border-radius: 3px; /* Rounded corners */
-            margin-right: 5px; /* Space between input and button */
-        }
-
-        .search-box button {
-            padding: 5px 10px; /* Padding for the button */
-            background-color: #FFCC00; /* Button color */
-            color: white; /* Button text color */
-            border: none; /* No border */
-            border-radius: 3px; /* Rounded corners */
-            cursor: pointer; /* Pointer cursor on hover */
+            background: #1D3E5D; /* Header color */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
         }
 
         /* Sidebar styles */
@@ -56,7 +30,6 @@
             left: -250px; /* Start hidden */
             background-color: #1D3E5D; /* Darker shade for the sidebar */
             transition: 0.3s; /* Smooth transition */
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
             padding-top: 40px; /* Space for header */
             z-index: 1; /* Ensure it appears above other elements */
         }
@@ -68,10 +41,6 @@
             color: #ffffff; /* White text */
             display: block; /* Block display */
             transition: background-color 0.3s; /* Background transition */
-        }
-
-        .sidebar a:not(:first-child):hover {
-            background-color: #FFCC00; /* Highlight color for other items */
         }
 
         /* Button to open the sidebar */
@@ -89,11 +58,10 @@
             border-radius: 5px; /* Rounded corners */
         }
 
-        /* Main content section */
         section {
-            background: #DFD0B8; /* Accent color */
+            background: #DFD0B8; /* Section background color */
             padding: 20px;
-            margin: 20px 15px; /* Adjust margin for fixed top area */
+            margin: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: margin-left 0.3s; /* Transition for section */
@@ -103,21 +71,8 @@
             color: #000000; /* Black text */
         }
 
-        p {
-            color: #333333; /* Dark gray text for better readability */
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin: 10px 0;
-        }
-
         footer {
-            background: #153448; /* Main color */
+            background: #153448; /* Footer color */
             color: #ffffff; /* White text */
             padding: 15px;
             text-align: center;
@@ -126,30 +81,17 @@
             width: 100%;
             margin-top: 20px;
         }
-
-        @media (max-width: 600px) {
-            section {
-                margin: 10px; /* Adjust margin for smaller screens */
-            }
-        }
     </style>
 </head>
 <body>
-
-    <!-- Minimal Header with Search Box -->
-    <div class="header">
-        <div class="search-box">
-            <input type="text" placeholder="Search...">
-            <button type="button">🔍</button>
-        </div>
-    </div>
 
     <!-- Button to open the sidebar -->
     <button class="openbtn" onclick="toggleSidebar()">☰ Menu</button>
 
     <!-- Sidebar -->
     <div id="mySidebar" class="sidebar">
-        <a href="#" style="padding-top: 10px;">&nbsp;</a> <!-- Empty top space -->
+        <a href="index.html">ホームに戻る</a> <!-- Home link -->
+        <a href="ai-statistics.html">AI・統計学</a>
         <a href="#guitar">Guitar</a>
         <a href="#signal-processing">Signal Processing</a>
         <a href="#others">Others</a>
@@ -157,64 +99,43 @@
         <a href="javascript:void(0)" onclick="toggleSidebar()">Close ×</a> <!-- Close button -->
     </div>
 
+    <!-- Header -->
+    <div class="header">
+        <h1>AI・統計学に関するページ</h1>
+    </div>
+
     <!-- Main content section -->
-    <section id="guitar">
-        <h2>Guitar: ギター</h2>
-        <p>ギターのこと</p>
+    <section>
+        <h2>AIの基本</h2>
+        <p>人工知能（AI）は、機械が人間のように学習、推論、適応する能力を持つ技術のことを指します。</p>
+    </section>
+
+    <section>
+        <h2>統計学の重要性</h2>
+        <p>統計学は、データを収集、分析、解釈する方法を学ぶ学問で、AIと深く関わっています。</p>
+    </section>
+
+    <section>
+        <h2>関連リンク</h2>
         <ul>
-            <li>test1</li>
-            <li>test2</li>
-            <li>test3</li>
-        </ul>
-        <p>Check out my playing:</p>
-        <ul>
-            <li><a href="#">Instagram</a></li>
+            <li><a href="#">AIに関する記事</a></li>
+            <li><a href="#">統計学に関する記事</a></li>
+            <li><a href="#">AIと統計学の融合</a></li>
         </ul>
     </section>
 
-    <!-- Signal Processing Section -->
-    <section id="signal-processing">
-        <h2>Signal Processing: 信号処理</h2>
-        <p>ギターに関連する信号処理のこと</p>
-        <ul>
-            <li><a href="acoustic-reflection.html">共鳴音響反射と音叉</a></li>
-            <li>test2</li>
-            <li>test3</li>
-        </ul>
-    </section>
-
-    <!-- Other Section -->
-    <section id="others">
-        <h2>Others</h2>
-        <p>他のこと</p>
-        <ul>
-            <li><a href="ai-statistics.html">統計学・AI</a></li> <!-- Link to AI & Statistics page -->
-            <li><a href="#">英語</a></li>
-            <li><a href="#">test1</a></li>
-        </ul>
-    </section>
-    
-    <!-- Contact Section -->
-    <footer id="contact">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch:</p>
-        <p>Email: email@example.com</p>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
 
     <script>
         function toggleSidebar() {
             var sidebar = document.getElementById("mySidebar");
-            var mainSections = document.querySelectorAll("section"); // Select all sections
             if (sidebar.style.left === "-250px") {
                 sidebar.style.left = "0";
-                mainSections.forEach(function(section) {
-                    section.style.marginLeft = "250px"; // Shift all sections to the right
-                });
             } else {
                 sidebar.style.left = "-250px";
-                mainSections.forEach(function(section) {
-                    section.style.marginLeft = "0"; // Reset margin for all sections
-                });
             }
         }
     </script>
