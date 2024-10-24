@@ -17,15 +17,17 @@
         /* Innovative top area */
         .top-area {
             background: linear-gradient(135deg, #153448, #1D3E5D); /* Gradient background */
-            height: 100px; /* Height of the top area */
+            height: 150px; /* Height of the top area */
             display: flex; /* Use flexbox */
-            align-items: center; /* Center items vertically */
-            justify-content: center; /* Center items horizontally */
+            flex-direction: column; /* Column layout */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
             color: #ffffff; /* White text */
             text-align: center; /* Center text */
             position: relative; /* For positioning */
             z-index: 1; /* Above other elements */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            padding: 20px 0; /* Padding for spacing */
         }
 
         .top-area h1 {
@@ -35,7 +37,7 @@
 
         .top-area p {
             font-size: 1.2em; /* Font size for subtitle */
-            margin: 0; /* No margin */
+            margin: 10px 0; /* Margin for spacing */
         }
 
         /* Sidebar styles */
@@ -53,7 +55,7 @@
         }
 
         .sidebar a {
-            padding: 10px 15px;
+            padding: 15px 20px; /* Increased padding */
             text-decoration: none;
             font-size: 20px; /* Font size */
             color: #ffffff; /* White text */
@@ -80,10 +82,11 @@
             border-radius: 5px; /* Rounded corners */
         }
 
+        /* Main content section */
         section {
             background: #DFD0B8; /* Accent color */
             padding: 20px;
-            margin: 60px 15px; /* Adjust margin for fixed top area */
+            margin: 20px 15px; /* Adjust margin for fixed top area */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: margin-left 0.3s; /* Transition for section */
