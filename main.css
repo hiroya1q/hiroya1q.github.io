@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Webpage Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        section {
+            background: #ffffff;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #35424a;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #35424a;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.3s;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #35424a;
+        }
+
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ホームセクション -->
+    <header>
+        <h1>Welcome</h1>
+        <p>example</p>
+    </header>
+
+    <!-- ギターセクション -->
+    <section id="guitar">
+        <h2>Guitar</h2>
+        <p>example1</p>
+        <ul>
+            <li>test1</li>
+            <li>test2</li>
+            <li>test3</li>
+        </ul>
+        <p>Check out my playing:</p>
+        <ul>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </section>
+
+    <!-- 信号処理セクション -->
+    <section id="signal-processing">
+        <h2>Signal Processing</h2>
+        <p>example2</p>
+        <ul>
+            <li><a href="acoustic-reflection.html">共鳴音響反射と音叉</a></li>
+            <li>test2</li>
+            <li>test3</li>
+        </ul>
+    </section>
+
+    <!-- otherセクション -->
+    <section id="others">
+        <h2>Others</h2>
+        <p></p>
+        <ul>
+            <li><a href="#">test1</a></li>
+        </ul>
+    </section>
+
+    <!-- 問い合わせセクション -->
+    <footer>
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch:</p>
+        <p>Email: email@example.com</p>
+    </footer>
+
+</body>
+</html>
