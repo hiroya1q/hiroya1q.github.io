@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Your Title</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,42 +14,15 @@
             position: relative; /* For sidebar positioning */
         }
 
-        /* Minimal header */
+        /* Minimal header with matching sidebar color */
         .header {
-            background: #153448; /* Header background color */
+            background: #1D3E5D; /* Same color as sidebar */
             height: 40px; /* Height of the header */
             display: flex; /* Use flexbox */
-            align-items: center; /* Center items vertically */
-            justify-content: space-between; /* Space between items */
+            justify-content: flex-end; /* Align items to the right */
             padding: 0 20px; /* Padding for spacing */
             position: relative; /* For positioning */
             z-index: 1; /* Above other elements */
-        }
-
-        /* Innovative top area */
-        .top-area {
-            background: linear-gradient(135deg, #153448, #1D3E5D); /* Gradient background */
-            height: 150px; /* Height of the top area */
-            display: flex; /* Use flexbox */
-            flex-direction: column; /* Column layout */
-            align-items: center; /* Center items horizontally */
-            justify-content: center; /* Center items vertically */
-            color: #ffffff; /* White text */
-            text-align: center; /* Center text */
-            position: relative; /* For positioning */
-            z-index: 1; /* Above other elements */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-            padding: 20px 0; /* Padding for spacing */
-        }
-
-        .top-area h1 {
-            font-size: 2.5em; /* Font size for title */
-            margin: 0; /* No margin */
-        }
-
-        .top-area p {
-            font-size: 1.2em; /* Font size for subtitle */
-            margin: 10px 0; /* Margin for spacing */
         }
 
         /* Search box styles */
@@ -67,7 +40,7 @@
 
         .search-box button {
             padding: 5px 10px; /* Padding for the button */
-            background-color: #1D3E5D; /* Button color */
+            background-color: #FFCC00; /* Button color */
             color: white; /* Button text color */
             border: none; /* No border */
             border-radius: 3px; /* Rounded corners */
@@ -84,7 +57,7 @@
             background-color: #1D3E5D; /* Darker shade for the sidebar */
             transition: 0.3s; /* Smooth transition */
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-            padding-top: 40px; /* Space for top area */
+            padding-top: 40px; /* Space for header */
             z-index: 1; /* Ensure it appears above other elements */
         }
 
@@ -163,18 +136,12 @@
 </head>
 <body>
 
-    <!-- Minimal Header -->
+    <!-- Minimal Header with Search Box -->
     <div class="header">
         <div class="search-box">
             <input type="text" placeholder="Search...">
             <button type="button">🔍</button>
         </div>
-    </div>
-
-    <!-- Innovative Top Area -->
-    <div class="top-area">
-        <h1>Welcome to My Site</h1>
-        <p>Your journey into music and signal processing starts here!</p>
     </div>
 
     <!-- Button to open the sidebar -->
