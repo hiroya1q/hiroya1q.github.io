@@ -92,8 +92,8 @@
     <div id="mySidebar" class="sidebar">
         <a href="index.html">ホームに戻る</a> <!-- Home link -->
         <a href="ai-statistics.html">AI・統計学</a>
-        <a href="#guitar">Guitar</a>
-        <a href="#signal-processing">Signal Processing</a>
+        <a href="rnn.html">リカレントニューラルネットワーク (RNN)</a>
+        <a href="lstm.html">LSTM ネットワーク</a>
         <a href="#others">Others</a>
         <a href="#contact">Contact</a>
         <a href="javascript:void(0)" onclick="toggleSidebar()">Close ×</a> <!-- Close button -->
@@ -118,9 +118,8 @@
     <section>
         <h2>関連リンク</h2>
         <ul>
-            <li><a href="#">AIに関する記事</a></li>
-            <li><a href="#">統計学に関する記事</a></li>
-            <li><a href="#">AIと統計学の融合</a></li>
+            <li><a href="rnn.html">リカレントニューラルネットワーク (RNN)</a></li>
+            <li><a href="lstm.html">LSTM ネットワーク</a></li>
         </ul>
     </section>
 
@@ -132,10 +131,17 @@
     <script>
         function toggleSidebar() {
             var sidebar = document.getElementById("mySidebar");
+            var mainSections = document.querySelectorAll("section"); // Select all sections
             if (sidebar.style.left === "-250px") {
                 sidebar.style.left = "0";
+                mainSections.forEach(function(section) {
+                    section.style.marginLeft = "250px"; // Shift all sections to the right
+                });
             } else {
                 sidebar.style.left = "-250px";
+                mainSections.forEach(function(section) {
+                    section.style.marginLeft = "0"; // Reset margin for all sections
+                });
             }
         }
     </script>
